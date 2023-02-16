@@ -49,9 +49,9 @@ def validate_type(value):
             _('%(value)s is less than 1'),
             params={'value': value},
         )
-    elif value > TYPE.length:
+    elif value > len(TYPE):
         raise ValidationError(
-            _(f'%(value)s is greater than {TYPE.length}'),
+            _(f'%(value)s is greater than {len(TYPE)}'),
             params={'value': value},
         )
 
@@ -65,9 +65,9 @@ def validate_region(value):
             _('%(value)s is less than 1'),
             params={'value': value},
         )
-    elif value > REGION.length:
+    elif value > len(REGION):
         raise ValidationError(
-            _(f'%(value)s is greater than {REGION.length}'),
+            _(f'%(value)s is greater than {len(REGION)}'),
             params={'value': value},
         )
 

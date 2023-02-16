@@ -1,18 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello from Adam</h1>
-    <h1>Hello from Edmir</h1>
-    <h1>Hello from Linus</h1>
-    <h1>Hello from Maxi</h1>
-    <h1>Hi from Liam!</h1>
-    <h1>Hi from Alex!</h1>
-    <h1>Hello from Maria</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Hello from Adam</h1>
+<h1>Hello from Edmir</h1>
+<h1>Hello from Linus</h1>
+<h1>Hello from Maxi</h1>
+<h1>Hi from Liam!</h1>
+<h1>Hi from Alex!</h1>
+<h1>Hello from Maria</h1>
+
+<div class="container">
+    <div class="row">
+        {% for ngo in object_list %}
+            <div class="col-12">
+                <div class="card">
+                    <p>Name: {{ ngo.name }}</p>
+                    <p>Type: {{ ngo.type }}</p>
+                    <p>founded: {{ ngo.founded }}</p>
+                    <p>founder: {{ ngo.founder }}</p>
+                    <p>director: {{ ngo.director }}</p>
+                    <p>Number of staff: {{ ngo.staff }}</p>
+                    <p>Region served: {{ ngo.region }}</p>
+                    <p>Location: {{ ngo.location }}</p>
+                    <p>headquarters: {{ ngo.headquarters }}</p>
+                    <span>Website:</span><a href="{{ ngo.website }}">{{ ngo.website }}</a>
+                    <p>purpose: {{ ngo.purpose }}</p>
+                    <p>description: {{ ngo.description|safe }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
