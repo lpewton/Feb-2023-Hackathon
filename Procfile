@@ -1,0 +1,1 @@
+web: gunicorn february_2023_hackathon.wsgi
