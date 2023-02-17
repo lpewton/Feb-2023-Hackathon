@@ -4,6 +4,7 @@ from django.core.exceptions import ValidationError
 from django.core.validators import (
     MaxValueValidator, MinValueValidator, URLValidator)
 from django.utils.translation import gettext_lazy as _
+from datetime import datetime
 
 
 TYPE = (
@@ -105,3 +106,6 @@ class NGO(models.Model):
         Magic string method
         """
         return f"{self.name}"
+
+    def year(self):
+        return self.founded.year
