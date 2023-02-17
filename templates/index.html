@@ -80,7 +80,11 @@
             <!-- modify this to your liking. This works exactly like a JS/Python For Loop -->
             <div class="col-12">
                 <div class="card">
-                    
+                    <a href="{% url 'ngo_single' ngo.pk %}" class="post-link index-review-link">
+                        <div class="card-text">
+                            <p>{{ngo.name}}</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         {% endfor %}

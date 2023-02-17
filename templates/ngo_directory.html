@@ -1,7 +1,32 @@
 {% extends 'base.html' %}
 
+{% block title %}Directory{% endblock %}
+
 {% block content %}
 
 <!-- stuff goes here -->
+<div class="container">
+    <div class="row mt-5">
+        {% for ngo in object_list %}
+            <div class="col-12 col-xl-4">
+                <div class="card">
+                    <a href="{% url 'ngo_single' ngo.pk %}" class="">
+                        <div class="card-text">
+                            <p>{{ngo.name}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+        
+        {% endif %}
+
+        {% endfor %}
+    </div>
+
+    <!-- Will need pagination code here as well -->
+</div>
 
 {% endblock %}
