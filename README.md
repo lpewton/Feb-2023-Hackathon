@@ -47,15 +47,16 @@ This project is aimed at anyone who wants to know more about NGOs worldwide. If 
 Created using [Figma](https://www.figma.com/)
 
 ### Homepage
-
+![Homepage wireframe](documentation/wireframes/homepage.png)
 
 ### About page
-
+![About page wireframe](documentation/wireframes/about-page.png)
 
 ### NGOs page
-
+![NGOs page wireframe](documentation/wireframes/ngos-page.png)
 
 ### Contact page
+![Contact page wireframe](documentation/wireframes/contact-page.png)
 
 # Features
 
