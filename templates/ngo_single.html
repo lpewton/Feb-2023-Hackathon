@@ -1,7 +1,31 @@
 {% extends 'base.html' %}
 
+{% block title %}{{ ngo.name }}{% endblock %}
+
 {% block content %}
 
-<!-- stuff goes here -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <!-- 
+                Rearrange these into elements as you see fit
+                The idea is to display all database fields
+            -->
+            <p>Name: {{ ngo.name }}</p>
+            <p>Type: {{ ngo.type }} - this needs work currently</p>
+            <p>founded: {{ ngo.founded }}</p>
+            <p>founder: {{ ngo.founder }}</p>
+            <p>director: {{ ngo.director }}</p>
+            <p>Number of staff: {{ ngo.staff }}</p>
+            <p>Region served: {{ ngo.region }}</p>
+            <p>location: {{ ngo.location }}</p>
+            <p>headquarters: {{ ngo.headquarters }}</p>
+            <p>Website: <a href="{{ ngo.website }}">{{ ngo.website }}</a></p>
+            <p>purpose: {{ ngo.purpose }}</p>
+            <p>description: {{ ngo.description|safe }}</p>
+            
+        </div>
+    </div>
+</div>
 
 {% endblock %}

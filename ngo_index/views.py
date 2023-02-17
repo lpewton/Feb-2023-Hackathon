@@ -35,10 +35,10 @@ class NGO_Single(View):
         Get method for retrieving a particular record
         """
         queryset = NGO.objects
-        ngo = get_object_or_404(queryste, pk=pk)
+        ngo = get_object_or_404(queryset, pk=pk)
         template_name = 'ngo_single.html'
         context = {
-            'NGO': ngo
+            'ngo': ngo
         }
         return render(request, template_name, context)
 
@@ -50,9 +50,9 @@ class NGO_Random(View):
     def get(self, request, *args, **kwargs):
         queryset = NGO.objects.order_by('?')
         ngo = queryset.first()
-        template_name = 'random_ngo.html'
+        template_name = 'ngo_single.html'
         context = {
-            "NGO": ngo
+            "ngo": ngo
         }
         return render(request, template_name, context)
 
