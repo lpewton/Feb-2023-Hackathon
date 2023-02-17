@@ -89,6 +89,14 @@ class SearchResults(generic.ListView):
         return object_list
 
 
+class Contact(View):
+    """
+    View for contact page
+    Could construct a queryset for users?
+    """
+    template_name = 'contact.html'
+
+
 def http_404(request, exception):
     """
     Handles HTTP 404 Page Not Found errors
