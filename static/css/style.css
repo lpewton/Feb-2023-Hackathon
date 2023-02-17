@@ -34,7 +34,6 @@ body {
 
 .nav-link:hover {
     color: #19db7d;
-    text-decoration: underline;
 }
 
 .nav-item {
@@ -43,6 +42,10 @@ body {
 
 .vibrant-green {
     color: #19db7d;
+}
+
+.btn.vibrant-green {
+    background-color: #030b27;
 }
 
 .btn.vibrant-green:hover {
