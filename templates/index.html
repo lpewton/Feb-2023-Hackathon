@@ -1,34 +1,86 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<div class="bg-red">
-    <h1>Hello from Adam</h1>
-    <h1>Hello from Edmir</h1>
-    <h1>Hello from Linus</h1>
-    <h1>Hello from Maxi</h1>
-    <h1>Hi from Liam!</h1>
-    <h1>Hi from Alex!</h1>
-    <h1>Hello from Maria</h1>
-</div>
 
+<!-- 
+    This is the landing page
+
+    Use this code to display images:
+    {% if "placeholder" in ngo.image.url %}
+        <img src="https://res.cloudinary.com/adamboley/image/upload/v1664390648/ozkmx0djgq9rf1f7rksi.jpg" alt="an image of a cat" aria-label="image of a cat">
+    {% else %}
+        <img src="{{ ngo.image.url }}" alt="Logo for {{ ngo.name }}" aria-label="Logo of {{ review.name }}">
+    {% endif %}
+
+    The other database fields can be accessed like so:
+    Name: {{ ngo.name }}
+    Type: {{ ngo.type }} - this needs work currently
+    founded: {{ ngo.founded }}
+    founder: {{ ngo.founder }}
+    director: {{ ngo.director }}
+    Number of staff: {{ ngo.staff }}
+    Region served: {{ ngo.region }}
+    location: {{ ngo.location }}
+    headquarters: {{ ngo.headquarters }}
+    Website: <a href="{{ ngo.website }}">{{ ngo.website }}</a>
+    purpose: {{ ngo.purpose }}
+    description: {{ ngo.description|safe }} (the safe flag escapes any HTML, which is a consideration with rich text fields)
+    Keep all database fields within the {% for ngo in object_list %} {% endfor %} tags
+
+    Pagination code:
+    <ul class="pagination justify-content-center mt-3">
+        {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a href="?page=1" class="page-link">&laquo; first</a>
+            </li>
+            <li class="page-item">
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link">previous</a>
+            </li>
+        {% else %}
+            <li class="page-item">
+                <a href="#" class="page-link disabled">&laquo; first</a>
+            </li>
+            <li class="page-item">
+                <a href="#" class="page-link disabled">previous</a>
+            </li>
+            
+        {% endif %}
+
+        {% for i in page_obj.paginator.page_range %}
+            {% if page_obj.number == i %}
+                <li class="page-item active"><a href="#" class="page-link">{{ i }}<span class="sr-only">(current)</span></a></li>
+            {% else %}
+                <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <li class="page-item">
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link">next</a>
+            </li>
+            <li class="page-item">
+                <a href="?page={{ page_obj.paginator.num_pages }}" class="page-link">last &raquo;</a>
+            </li>
+
+        {% else %}
+            <li class="page-item">
+                <a href="#" class="page-link disabled">next</a>
+            </li>
+            <li class="page-item">
+                <a href="#" class="page-link disabled">last &raquo;</a>
+            </li>
+            
+        {% endif %}
+    </ul>
+ -->
 
 <div class="container">
     <div class="row">
         {% for ngo in object_list %}
+            <!-- modify this to your liking. This works exactly like a JS/Python For Loop -->
             <div class="col-12">
                 <div class="card">
-                    <p>Name: {{ ngo.name }}</p>
-                    <p>Type: {{ ngo.type }}</p>
-                    <p>founded: {{ ngo.founded }}</p>
-                    <p>founder: {{ ngo.founder }}</p>
-                    <p>director: {{ ngo.director }}</p>
-                    <p>Number of staff: {{ ngo.staff }}</p>
-                    <p>Region served: {{ ngo.region }}</p>
-                    <p>Location: {{ ngo.location }}</p>
-                    <p>headquarters: {{ ngo.headquarters }}</p>
-                    <span>Website:</span><a href="{{ ngo.website }}">{{ ngo.website }}</a>
-                    <p>purpose: {{ ngo.purpose }}</p>
-                    <p>description: {{ ngo.description|safe }}</p>
+                    
                 </div>
             </div>
         {% endfor %}
