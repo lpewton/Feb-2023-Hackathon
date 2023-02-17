@@ -73,20 +73,62 @@
         {% endif %}
     </ul>
  -->
-
+    <div id="carouselExampleAutoplaying" class="carousel slide col-10 mx-auto mt-1" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #030b27;"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #030b27;"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: #030b27;"></button>
+          </div>
+        <div class="carousel-inner">
+        <div class="carousel-item active card" data-bs-interval="4000" style="height: 500px;">
+            <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+        </div>
+        <div class="carousel-item card" data-bs-interval="4000" style="height: 500px;">
+            <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+        </div>
+        <div class="carousel-item card" data-bs-interval="4000" style="height: 500px;" >
+            <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+        </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon border border-start-0" aria-hidden="true" style="background-color: #030b27; border-radius: 8px;"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" >
+        <span class="carousel-control-next-icon border border-start-0" aria-hidden="true" style="background-color: #030b27; border-radius: 8px;"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 <div class="container">
-    <div class="row">
+    <div class="row flex-row flex-nowrap justify-content-center">
         {% for ngo in object_list %}
             <!-- modify this to your liking. This works exactly like a JS/Python For Loop -->
-            <div class="col-12">
-                <div class="card">
-                    <a href="{% url 'ngo_single' ngo.pk %}" class="post-link index-review-link">
-                        <div class="card-text">
-                            <p>{{ngo.name}}</p>
+            <!--<div class="col-4">
+                <div class="card col-12 mt-5">
+                    <a href="{% url 'ngo_single' ngo.pk %}" class="post-link index-review-link ">
+                        <img src="#" class="card-img-top" alt="...">
+                        <h5 class="card-title text-decoration-none">{{ngo.name}}</h5>
+                        <div class="card-text text-decoration-none">
+                            <p>NGO description</p>
                         </div>
                     </a>
-                </div>
-            </div>
+                </div> 
+            </div> -->
         {% endfor %}
     </div>
 </div>
