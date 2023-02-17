@@ -59,6 +59,13 @@ class NGO_Random(View):
 
 
 class SearchResults(generic.ListView):
+    """
+    View for rendering the search results page
+    """
+    model = NGO
+    template_name = 'search_results.html'
+    paginate_by = 4
+
     def querystring(self):
         """
         querystring method
@@ -86,7 +93,7 @@ class SearchResults(generic.ListView):
             Q(location__icontains=query) |
             Q(headquarters__icontains=query) |
             Q(purpose__icontains=query)
-            ).filter(approved=True)
+            )
         return object_list
 
 
