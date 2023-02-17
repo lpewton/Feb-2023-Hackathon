@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
+from django.views.generic.base import TemplateView
 from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.db.models import Q
@@ -89,12 +90,16 @@ class SearchResults(generic.ListView):
         return object_list
 
 
-class Contact(View):
+class Contact(TemplateView):
     """
     View for contact page
     Could construct a queryset for users?
     """
     template_name = 'contact.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 
 def http_404(request, exception):
