@@ -174,3 +174,78 @@ body {
     max-width: 50%;
     margin: 0 auto
 }
+
+/*Directory*/
+
+.ngo-card {
+    background-color: #c3ccc5;
+    width: 18rem;
+    text-align: center;
+    padding: 0;
+    border-radius: 0%;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-container-top {
+    margin-bottom: 4.5rem;
+}
+
+.ngo-card-name {
+    font-size: x-large;
+}
+
+.ngo-card-img {
+    width: 100%;
+}
+
+.ngo-card-link {
+    color: #429534;
+}
+
+.directory-pag {
+    margin-top: 4.5rem;
+}
+
+.directory-pag-itm {
+    margin: 1%;
+}
+
+.directory-pag-a {
+    background-color: #c3ccc5;
+    border-radius: 10%;
+    color: black;
+}
+
+.directory-pag-a:hover {
+    background-color: #429534;
+    color: black;
+}
+
+/*Responsiveness*/
+
+@media  screen and (max-width: 850px) {
+    .ngo-card {
+        width: 14rem;
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .ngo-card {
+        margin-bottom: 2rem;
+        width: 18rem;
+    }        
+   
+    .card-container-top {
+        margin-bottom: 0;
+    }
+
+    .directory-pag-a {
+        font-size: xx-small;
+    }
+}
+
