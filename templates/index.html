@@ -76,31 +76,37 @@
     {% for ngo in object_list %}
     {% endfor %}
  -->
-<div class="container">
-    <div id="carouselExampleAutoplaying" class="carousel slide col-10 mx-auto mt-1" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #030b27;"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #030b27;"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: #030b27;"></button>
-        </div>
-        <div class="carousel-inner">
-            {% for ngo in object_list %}
+<section id="hero" class="container-fluid">
+    <div class="container">
+        <div id="carouselExampleAutoplaying" class="carousel slide col-5 mx-auto mt-1" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1" style="background-color: #030b27;"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2" style="background-color: #030b27;"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3" style="background-color: #030b27;"></button>
+            </div>
+            <div class="carousel-inner">
+                {% for ngo in object_list %}
                 <div class="carousel-item active card" data-bs-interval="4000" style="height: 500px">
                     {% if "placeholder" in ngo.image.url %}
-                        <img src="https://res.cloudinary.com/adamboley/image/upload/v1664390648/ozkmx0djgq9rf1f7rksi.jpg" class="d-block w-100 card-img-top index-image" alt="image of a cat" aria-label="image of a cat">
+                    <img src="https://res.cloudinary.com/adamboley/image/upload/v1664390648/ozkmx0djgq9rf1f7rksi.jpg"
+                        class="d-block w-100 card-img-top index-image" alt="image of a cat" aria-label="image of a cat">
                     {% else %}
-                       <img src="{{ ngo.image.url }}" alt="an image of {{ ngo.name }}'s logo" class="d-block w-100 card-img-top index-image" alt="..." style="height: 300px;">
+                    <img src="{{ ngo.image.url }}" alt="an image of {{ ngo.name }}'s logo"
+                        class="d-block w-100 card-img-top index-image" alt="..." style="height: 300px;">
                     {% endif %}
 
                     <div class="card-body">
                         <h3 class="text-center">{{ ngo.name }}</h5>
-                        <p class="text-center">{{ ngo.purpose }}</p>
+                            <p class="text-center">{{ ngo.purpose }}</p>
                     </div>
                 </div>
 
 
-            {% endfor %}
-            <!-- <div class="carousel-item active card" data-bs-interval="4000" style="height: 500px;">
+                {% endfor %}
+                <!-- <div class="carousel-item active card" data-bs-interval="4000" style="height: 500px;">
                 <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
@@ -124,15 +130,36 @@
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div> -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon border border-start-0" aria-hidden="true"
+                    style="background-color: #030b27; border-radius: 8px;"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon border border-start-0" aria-hidden="true"
+                    style="background-color: #030b27; border-radius: 8px;"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon border border-start-0" aria-hidden="true" style="background-color: #030b27; border-radius: 8px;"></span>
-        <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next" >
-        <span class="carousel-control-next-icon border border-start-0" aria-hidden="true" style="background-color: #030b27; border-radius: 8px;"></span>
-        <span class="visually-hidden">Next</span>
-        </button>
+    </div>
+</section>
+
+<div class="container-fluid">
+    <div class="row justify-content-center space">
+        <div class="col-5 gy-5 mx-3">
+            <p class="info-home">NGO Day is observed every year on February 27. N.G.O. is an acronym for non-governmental organization.
+            World NGO Day is a day set aside to recognize, celebrate and honor the fundamental contributions and
+            profound impact that these independent organizations have had on the world. N.G.O.s are nonprofit
+            organizations and although they’re a modern phenomenon, their history spans back hundreds of years. Their
+            influence continues to grow and make positive changes where needed in today’s world.
+            </p>
+        </div>
+        <div class="col-5 gy-5 mx-3">
+            <img src="../static/project-img/world-day-img.jpg" class="img-fluid rounded" alt="">
+        </div>
     </div>
 </div>
 
