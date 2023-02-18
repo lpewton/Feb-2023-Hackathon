@@ -164,3 +164,13 @@ body {
 .form-control {
     background-color: #ffffffac;
 }
+
+
+
+/* index page styles */
+
+.index-image {
+    max-height: 300px;
+    max-width: 50%;
+    margin: 0 auto
+}

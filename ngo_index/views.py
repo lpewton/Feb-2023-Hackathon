@@ -14,7 +14,7 @@ class LandingPage(generic.ListView):
     model = NGO
     template_name = 'index.html'
     paginate_by = 3
-    queryset = NGO.objects.order_by('-founded')
+    queryset = NGO.objects.order_by('founded')
 
 
 class NGO_Directory(generic.ListView):

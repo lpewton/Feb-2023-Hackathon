@@ -72,6 +72,9 @@
             
         {% endif %}
     </ul>
+
+    {% for ngo in object_list %}
+    {% endfor %}
  -->
 <div class="container">
     <div id="carouselExampleAutoplaying" class="carousel slide col-10 mx-auto mt-1" data-bs-ride="carousel">
@@ -79,32 +82,48 @@
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" style="background-color: #030b27;"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" style="background-color: #030b27;"></button>
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" style="background-color: #030b27;"></button>
-          </div>
+        </div>
         <div class="carousel-inner">
-        <div class="carousel-item active card" data-bs-interval="4000" style="height: 500px;">
-            <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-        </div>
-        <div class="carousel-item card" data-bs-interval="4000" style="height: 500px;">
-            <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-        </div>
-        <div class="carousel-item card" data-bs-interval="4000" style="height: 500px;" >
-            <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-        </div>
+            {% for ngo in object_list %}
+                <div class="carousel-item active card" data-bs-interval="4000" style="height: 500px">
+                    {% if "placeholder" in ngo.image.url %}
+                        <img src="https://res.cloudinary.com/adamboley/image/upload/v1664390648/ozkmx0djgq9rf1f7rksi.jpg" class="d-block w-100 card-img-top index-image" alt="image of a cat" aria-label="image of a cat">
+                    {% else %}
+                       <img src="{{ ngo.image.url }}" alt="an image of {{ ngo.name }}'s logo" class="d-block w-100 card-img-top index-image" alt="..." style="height: 300px;">
+                    {% endif %}
+
+                    <div class="card-body">
+                        <h3 class="text-center">{{ ngo.name }}</h5>
+                        <p class="text-center">{{ ngo.purpose }}</p>
+                    </div>
+                </div>
+
+
+            {% endfor %}
+            <!-- <div class="carousel-item active card" data-bs-interval="4000" style="height: 500px;">
+                <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="carousel-item card" data-bs-interval="4000" style="height: 500px;">
+                <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="carousel-item card" data-bs-interval="4000" style="height: 500px;" >
+                <img src="../static/project-img/logo.png" class="d-block w-100 card-img-top" alt="..." style="height: 300px;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div> -->
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
         <span class="carousel-control-prev-icon border border-start-0" aria-hidden="true" style="background-color: #030b27; border-radius: 8px;"></span>
