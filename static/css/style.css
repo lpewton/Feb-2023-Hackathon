@@ -52,6 +52,34 @@ body {
     background-color: #19db7d;
 }
 
+/*Footer*/
+footer {
+    background-color: #030b27;
+    color: white;
+    font-size: x-large;
+    height: 5rem;
+}
+
+.footer-element {
+    margin-top: 0.5rem;
+}
+
+.footer-icon {
+    margin: 0 30px;
+    font-size: xx-large;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-instagram {
+    color: #f09433;
+}
+
+.fa-twitter {
+    color: #00acee;
+}
 
 /* contact page styles here*/
 .wrapper-info {
@@ -228,6 +256,18 @@ body {
 /*Responsiveness*/
 
 @media  screen and (max-width: 850px) {
+
+    /*Footer*/
+    footer {
+        font-size: large;
+    }
+
+    .footer-icon {
+        font-size: large;
+        margin: 0 15px;
+    }
+
+    /*Directory*/
     .ngo-card {
         width: 14rem;
         font-size: small;
@@ -235,6 +275,16 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+    /*Footer*/ 
+    footer {
+        font-size: small;
+    }
+
+    .footer-icon {
+        font-size: medium;
+        margin: 0 10px;
+    }
+    /*Directory*/
     .ngo-card {
         margin-bottom: 2rem;
         width: 18rem;
