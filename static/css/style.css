@@ -84,7 +84,7 @@ footer {
 /* contact page styles here*/
 .wrapper-info {
 
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../project-img/bckg-img.jpg) center center / cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../project-img/bckg.jpg) center center / cover no-repeat;
 }
 
 .info {
@@ -119,7 +119,7 @@ footer {
 .info-contact {
     margin-bottom: 80px;
     padding: 6px 12px;
-    background-color: #ffffffac;
+    background-color: #ffffffc4;
     color: black;
     border-radius: 10px;
     height: 260px;
@@ -190,7 +190,7 @@ footer {
 }
 
 .form-control {
-    background-color: #ffffffac;
+    background-color: #ffffffc4;
 }
 
 /*Single NGO page*/
@@ -272,7 +272,7 @@ footer {
 
 /*Responsiveness*/
 
-@media  screen and (max-width: 850px) {
+@media screen and (max-width: 850px) {
 
     /*Footer*/
     footer {
@@ -292,7 +292,8 @@ footer {
 }
 
 @media screen and (max-width: 450px) {
-    /*Footer*/ 
+
+    /*Footer*/
     footer {
         font-size: small;
     }
@@ -301,12 +302,13 @@ footer {
         font-size: medium;
         margin: 0 10px;
     }
+
     /*Directory*/
     .ngo-card {
         margin-bottom: 2rem;
         width: 18rem;
-    }        
-   
+    }
+
     .card-container-top {
         margin-bottom: 0;
     }
@@ -315,4 +317,3 @@ footer {
         font-size: x-small;
     }
 }
-
