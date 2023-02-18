@@ -8,11 +8,16 @@
     <div class="row mt-5 card-container card-container-top">
         {% for ngo in object_list %}
         <div class="card ngo-card">
-            <img src="../static/project-img/world-day-img.jpg" class="card-img-top ngo-card-img" alt="...">
-            <div class="card-body">
+            {% if "placeholder" in ngo.image.url %}
+            <img src="https://res.cloudinary.com/adamboley/image/upload/v1664390648/ozkmx0djgq9rf1f7rksi.jpg"
+                class="d-block w-100 card-img-top index-image" alt="image of a cat" aria-label="image of a cat">
+            {% else %}
+            <img src="{{ ngo.image.url }}" alt="an image of {{ ngo.name }}'s logo"
+                class="d-block w-100 card-img-top index-image" alt="..." style="height: 170px;">
+            {% endif %} <div class="card-body">
                 <h5 class="card-title ngo-card-name">{{ngo.name}}</h5>
                 <p class="card-text">purpose: {{ ngo.purpose }}}</p>
-                <a href="{{ ngo.website }}" class="ngo-card-link">{{ ngo.website }}</a>
+                <a href="{{ ngo.website }}" class="ngo-card-link" target="_blank">{{ ngo.website }}</a>
             </div>
         </div>
         {% if forloop.counter|divisibleby:3 %}
@@ -35,6 +40,6 @@
         <li class="page-item directory-pag-itm"><a class="page-link directory-pag-a" href="#">Next</a></li>
         <li class="page-item directory-pag-itm"><a class="page-link directory-pag-a" href="#">Last Page</a></li>
     </ul>
-  </nav>
+</nav>
 
 {% endblock %}

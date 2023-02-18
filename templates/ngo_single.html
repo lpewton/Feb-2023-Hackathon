@@ -6,28 +6,82 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-12">
-            <!-- 
-                Rearrange these into elements as you see fit
-                The idea is to display all database fields
-            -->
-            <p>Name: {{ ngo.name }}</p>
-            <p>Type: {{ ngo.type }} - this needs work currently</p>
-            <p>founded: {{ ngo.founded }}</p>
-            <p>founded year: {{ ngo.year }}</p>
-            <!-- accesses a custom method to display the year only -->
-            <p>founder: {{ ngo.founder }}</p>
-            <p>director: {{ ngo.director }}</p>
-            <p>Number of staff: {{ ngo.staff }}</p>
-            <p>Region served: {{ ngo.region }}</p>
-            <p>location: {{ ngo.location }}</p>
-            <p>headquarters: {{ ngo.headquarters }}</p>
-            <p>Website: <a href="{{ ngo.website }}">{{ ngo.website }}</a></p>
-            <p>purpose: {{ ngo.purpose }}</p>
-            <p>description: {{ ngo.description|safe }}</p>
-            
+        <div class="single-name">
+            <h1>{{ ngo.name }}</h1>
+        </div>
+        <div class="row justify-content-start" >
+            <div class="col-6">
+                <table class="table table-success table-striped">
+                    <tr>
+                        <th>NGO DESCRIPTION</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td class="text-end">{{ ngo.type }} NEEDS WORK</td>
+                    </tr>
+                    <tr>
+                        <td>Founded</td>
+                        <td class="text-end">{{ ngo.founded }}       </td>
+                    </tr>
+                    <tr>
+                        <td>Founded year</td>
+                        <td class="text-end">{{ ngo.year }}</td>
+                    </tr>
+                    <tr>
+                        <td>Founder(s)</td>
+                        <td class="text-end">{{ ngo.founders }}</td>
+                    </tr>
+                    <tr>
+                        <td>Director</td>
+                        <td class="text-end">{{ ngo.director }}</td>
+                    </tr>
+                    <tr>
+                        <td>Number of Staff</td>
+                        <td class="text-end">{{ ngo.staff }}</td>
+                    </tr>
+                    <tr>
+                        <td>Region Served</td>
+                        <td class="text-end">{{ ngo.region }} NEEDS WORK</td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td class="text-end">{{ ngo.location }}</td>
+                    </tr>
+                    <tr>
+                        <td>Headquarters</td>
+                        <td class="text-end">{{ ngo.headquarters }}</td>
+                    </tr>
+                    <tr>
+                        <td>Website</td>
+                        <td class="text-end"><a href="{{ ngo.website }}">{{ ngo.website }}</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-4">
+                {% if "placeholder" in ngo.image.url %}
+                <img src="https://res.cloudinary.com/adamboley/image/upload/v1664390648/ozkmx0djgq9rf1f7rksi.jpg"
+                    class="d-block w-100 card-img-top index-image single-image" alt="image of a cat"
+                    aria-label="image of a cat">
+                {% else %}
+                <img src="{{ ngo.image.url }}" alt="an image of {{ ngo.name }}'s logo"
+                    class="d-block w-100 card-img-top single-image" alt="...">
+                {% endif %} <div class="card-body">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h2>What purpose does it serve?</h2>
+                <p>purpose: {{ ngo.purpose }}</p>
+            </div>
+            <div class="col-6">
+                <h2>What does it do?</h2>
+                <p>description: {{ ngo.description|safe }}</p>
+            </div>
         </div>
     </div>
+</div>
 </div>
 
 {% endblock %}
