@@ -193,6 +193,15 @@ footer {
     background-color: #ffffffac;
 }
 
+/*Single NGO page*/
+.single-name {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.single-image {
+    object-fit: contain;
+}
 
 
 /* index page styles */
@@ -226,8 +235,8 @@ footer {
     font-size: x-large;
 }
 
-.ngo-card-img {
-    width: 100%;
+.index-image {
+    height: 170px;
 }
 
 .ngo-card-link {
