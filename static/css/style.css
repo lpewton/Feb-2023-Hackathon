@@ -203,7 +203,6 @@ footer {
     object-fit: contain;
 }
 
-
 /* index page styles */
 
 .index-image {
@@ -260,14 +259,6 @@ footer {
     color: #429534;
 }
 
-.directory-pag {
-    margin-top: 4.5rem;
-}
-
-.directory-pag-itm {
-    margin: 1%;
-}
-
 .directory-pag-a {
     background-color: #c3ccc5;
     border-radius: 10%;
@@ -321,7 +312,7 @@ footer {
     }
 
     .directory-pag-a {
-        font-size: xx-small;
+        font-size: x-small;
     }
 }
 
