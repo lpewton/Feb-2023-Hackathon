@@ -15,6 +15,17 @@ Run Development server:
     - [User goals](#user-goals)
 - [Wireframes](#wireframes)
 - [Features](#features)
+- [Development choices](#development-choices)
+- [Design choices](#design-choices)
+    - [Colour palette](#colour-palette)
+    - [Font](#font)
+    - [Images](#images)
+- [Deployment](#deployment)
+    - [Project set-up](#project-set-up)
+    - [Development process](#development-process)
+- [Bugs](#bugs)
+- [Testing](#testing)
+- [Credits](#credits)
 
 # Scope
 
@@ -44,26 +55,92 @@ This project is aimed at anyone who wants to know more about NGOs worldwide. If 
 
 # Wireframes
 
-Created using [Figma](https://www.figma.com/)
+Created using [Figma](https://www.figma.com/) (click to expand)
 
-### Homepage
+<details><summary>Homepage</summary>
+
 ![Homepage wireframe](documentation/wireframes/homepage.png)
+</details>
 
-### About page
+<details><summary>About page</summary>
+
 ![About page wireframe](documentation/wireframes/about-page.png)
+</details>
 
-### NGOs page
+<details><summary>NGOs page</summary>
+
 ![NGOs page wireframe](documentation/wireframes/ngos-page.png)
+</details>
 
-### Contact page
+<details><summary>Contact page</summary>
+
 ![Contact page wireframe](documentation/wireframes/contact-page.png)
+</details>
 
 # Features
 
-## Logo
+### Logo
+
+`Add information about logo choice/how it was made`
+
+![Logo](documentation/design/logo.png)
+
+### Navigation menu
+
+The navigation menu at the top of the page allows for easy site navigation; it is clear to the user how to access different pages or to return to a previous page without relying on browser forward/back buttons.
+
+### Hero image
 
 
-## Navigation menu
+### Search bar
+
+The search bar allows users to search for a specific element on the website, e.g., if they are looking for information on a particular NGO.
+
+### Homepage
 
 
-## Hero image
+### NGOs page
+
+
+### About page
+
+
+### Contact page
+
+
+### Favicon
+
+
+# Development choices
+
+
+# Design choices
+
+## Colour palette
+
+The chosen colour palette is symbolic of the Earth and uses complementing blues, green, grey and white:
+![Colour palette](documentation/design/colour-palette.png)
+
+## Font
+The chosen font is `Add font here`
+The font is white over the darker background of the header and footer, and dark over white and light backgrounds in the main body of each page to make sure it is accessible and can be easily read by users.
+
+## Images
+
+
+# Deployment
+
+
+## Project set-up
+
+
+## Development process
+
+
+# Bugs
+
+
+# Testing
+
+
+# Credits
