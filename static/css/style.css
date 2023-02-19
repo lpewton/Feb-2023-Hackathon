@@ -272,6 +272,18 @@ footer {
 
 /*Responsiveness*/
 
+@media screen and (max-width: 1200px) {
+    .info-home {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .info-home {
+        font-size: 80%;
+    }
+}
+
 @media screen and (max-width: 850px) {
 
     /*Footer*/
@@ -288,6 +300,12 @@ footer {
     .ngo-card {
         width: 14rem;
         font-size: small;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .info-home {
+        font-size: 100%;
     }
 }
 
