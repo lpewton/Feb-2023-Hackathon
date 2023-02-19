@@ -18,11 +18,49 @@
                     </tr>
                     <tr>
                         <td>Type</td>
-                        <td class="text-end">{{ ngo.type }} NEEDS WORK</td>
+                        <td class="text-end">
+                            {% if ngo.type == 1 %}
+                                Environment
+                            {% elif ngo.type == 2 %}
+                                Sports
+                            {% elif ngo.type == 3 %}
+                                Medical
+                            {% elif ngo.type == 4 %}
+                                Disaster Relief
+                            {% elif ngo.type == 5 %}
+                                Anti-corruption
+                            {% elif ngo.type == 6 %}
+                                Peace
+                            {% elif ngo.type == 7 %}
+                                Humanitarian
+                            {% elif ngo.type == 8 %}
+                                Technology
+                            {% elif ngo.type == 9 %}
+                                Education
+                            {% elif ngo.type == 10 %}
+                                Regulatory
+                            {% elif ngo.type == 11 %}
+                                Religious
+                            {% elif ngo.type == 12 %}
+                                Ethics
+                            {% elif ngo.type == 13 %}
+                                Policy
+                            {% elif ngo.type == 14 %}
+                                Governance
+                            {% elif ngo.type == 15 %}
+                                Youth
+                            {% elif ngo.type == 16 %}
+                                Legal
+                            {% elif ngo.type == 17 %}
+                                Democracy
+                            {% elif ngo.type == 18 %}
+                                Other
+                            {% endif %}
+                        </td>
                     </tr>
                     <tr>
                         <td>Founded</td>
-                        <td class="text-end">{{ ngo.founded }}       </td>
+                        <td class="text-end">{{ ngo.founded }}</td>
                     </tr>
                     <tr>
                         <td>Founded year</td>
@@ -37,12 +75,32 @@
                         <td class="text-end">{{ ngo.director }}</td>
                     </tr>
                     <tr>
-                        <td>Number of Staff</td>
+                        <td>Number of staff</td>
                         <td class="text-end">{{ ngo.staff }}</td>
                     </tr>
                     <tr>
-                        <td>Region Served</td>
-                        <td class="text-end">{{ ngo.region }} NEEDS WORK</td>
+                        <td>Region served</td>
+                        <td class="text-end">
+                            {% if ngo.region == 1 %}
+                                Worldwide
+                            {% elif ngo.region == 2 %}
+                                Europe
+                            {% elif ngo.region == 3 %}
+                                North America
+                            {% elif ngo.region == 4 %}
+                                Central America
+                            {% elif ngo.region == 5 %}
+                                South America
+                            {% elif ngo.region == 6 %}
+                                Asia
+                            {% elif ngo.region == 7 %}
+                                Africa
+                            {% elif ngo.region == 8 %}
+                                Oceania
+                            {% elif ngo.region == 9 %}
+                                Middle East
+                            {% endif %}
+                        </td>
                     </tr>
                     <tr>
                         <td>Location</td>
