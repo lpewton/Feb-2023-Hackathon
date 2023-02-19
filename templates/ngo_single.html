@@ -10,7 +10,7 @@
             <h1>{{ ngo.name }}</h1>
         </div>
         <div class="row justify-content-start mb-3 mt-3">
-            <div class="col-6">
+            <div class="col-8">
                 <table class="table table-success table-striped">
                     <tr>
                         <th>NGO DESCRIPTION</th>
@@ -58,11 +58,6 @@
                             {% endif %}
                         </td>
                     </tr>
-                    <tr>
-                        <td>Founded</td>
-                        <td class="text-end">{{ ngo.founded }}</td>
-                    </tr>
-                    <tr>
                         <td>Founded year</td>
                         <td class="text-end">{{ ngo.year }}</td>
                     </tr>
@@ -123,7 +118,7 @@
                     aria-label="image of a cat">
                 {% else %}
                 <img src="{{ ngo.image.url }}" alt="an image of {{ ngo.name }}'s logo"
-                    class="d-block w-100 card-img-top single-image" alt="...">
+                    class="d-block w-100 card-img-top single-image h-75" alt="...">
                 {% endif %} <div class="card-body">
                 </div>
             </div>
@@ -131,11 +126,13 @@
         <div class="row">
             <div class="col-6">
                 <h2>What purpose does it serve?</h2>
-                <p>purpose: {{ ngo.purpose }}</p>
+                <hr>
+                <p>{{ ngo.purpose }}</p>
             </div>
             <div class="col-6">
                 <h2>What does it do?</h2>
-                <p>description: {{ ngo.description|safe }}</p>
+                <hr>
+                <p class="single-description">{{ ngo.description|safe }}</p>
             </div>
         </div>
     </div>
