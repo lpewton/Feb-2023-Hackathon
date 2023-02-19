@@ -5,6 +5,7 @@
 <section id="hero" class="container-fluid">
     <div class="container">
         <div id="carouselExampleAutoplaying" class="carousel slide col-5 mx-auto mt-1" data-bs-ride="carousel">
+
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1" style="background-color: #030b27;"></button>
@@ -48,11 +49,18 @@
             </button>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 gy-4">
+            <a class="btn btn-outline-success w-50 vibrant-green" type="button" href="{% url 'ngo_directory' %}" style="font-size: 150%;">Check out other NGOs</a>
+            </div>
+        </div>
+    </div>
 </section>
 
-<div class="container-fluid">
-    <div class="row justify-content-center space">
-        <div class="col-5 gy-5 mx-3">
+<div class="container no-gutter my-5 p-3">
+    <div class="row justify-content-around">
+        <div class="col-md-5 org-describe">
             <p class="info-home">NGO Day is observed every year on February 27. N.G.O. is an acronym for non-governmental organization.
             World NGO Day is a day set aside to recognize, celebrate and honor the fundamental contributions and
             profound impact that these independent organizations have had on the world. N.G.O.s are nonprofit
@@ -60,17 +68,9 @@
             influence continues to grow and make positive changes where needed in today’s world.
             </p>
         </div>
-        <div class="col-5 gy-5 mx-3">
-            <img src="../static/project-img/world-day-img.jpg" class="img-fluid rounded" alt="">
+        <div class="col-md-6">
+            <img src="../static/project-img/world-day-img.jpg" class="img-fluid max-width: 100% height: auto rounded" alt="">
         </div>
-    </div>
-</div>
-<div class="container no-gutter border mt-3 p-3">
-    <div class="row">
-        <div class="col-md-6 org-describe p-5">
-            his is sample text, This is sample text, This is sample text, This is sample text, This is sample text, This is sample text, This is sample text, This is sample text, This is sample text, This is sample text, This is sample text, This is sample text,
-        </div>
-        <div class="col-md-6"><img class="img-fluid max-width: 100% height: auto" src="../static/project-img/world-day-img.jpg" alt="logo"></div>
     </div>
 </div>
 
