@@ -4,6 +4,7 @@
 body {
     padding: 0;
     margin: 0;
+    height: 100vh;
 }
 
 .navbar {
@@ -58,6 +59,9 @@ footer {
     color: white;
     font-size: x-large;
     height: 5rem;
+    /* position: absolute;
+    bottom: 0; */
+    width: 100%;
 }
 
 .footer-element {
