@@ -10,7 +10,7 @@
             <h1>{{ ngo.name }}</h1>
         </div>
         <div class="row justify-content-start mb-3 mt-3">
-            <div class="col-8">
+            <div class="col-6">
                 <table class="table table-success table-striped">
                     <tr>
                         <th>NGO DESCRIPTION</th>
@@ -111,7 +111,7 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-4">
+            <div class="col-4 ms-5 d-none d-sm-inline">
                 {% if "placeholder" in ngo.image.url %}
                 <img src="https://res.cloudinary.com/adamboley/image/upload/v1664390648/ozkmx0djgq9rf1f7rksi.jpg"
                     class="d-block w-100 card-img-top index-image single-image" alt="image of a cat"
@@ -132,7 +132,7 @@
             <div class="col-6">
                 <h2>What does it do?</h2>
                 <hr>
-                <p class="single-description">{{ ngo.description|safe }}</p>
+                <p>{{ ngo.description|safe }}</p>
             </div>
         </div>
     </div>

@@ -202,16 +202,6 @@ footer {
     margin-top: 1rem;
 }
 
-.single-image {
-    object-fit: contain;
-}
-
-.single-description {
-    font-family: "Montserrat", sans-serif;
-    color: blue;
-    background-color: green;
-}
-
 /* index page styles */
 
 .index-image {
