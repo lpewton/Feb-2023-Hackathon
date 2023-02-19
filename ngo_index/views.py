@@ -138,6 +138,13 @@ class Contact(generic.CreateView):
             return render(request, Contact.template_name, context)
 
 
+class About(TemplateView):
+    """
+    View for About page
+    """
+    template_name = 'about.html'
+
+
 def http_404(request, exception):
     """
     Handles HTTP 404 Page Not Found errors

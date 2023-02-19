@@ -7,5 +7,6 @@ urlpatterns = [
     path('random/', views.NGO_Random.as_view(), name='random'),
     path('search/', views.SearchResults.as_view(), name='search_results'),
     path('contact/', views.Contact.as_view(), name='contact'),
+    path('about/', views.About.as_view(), name='about'),
     path('ngos/<int:pk>/', views.NGO_Single.as_view(), name='ngo_single'),
 ]
