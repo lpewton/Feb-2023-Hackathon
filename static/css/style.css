@@ -87,7 +87,7 @@ footer {
 /* contact page styles here*/
 .wrapper-info {
 
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../project-img/bckg.jpg) center center / cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(https://res.cloudinary.com/adamboley/image/upload/v1676821307/bckg_hlgxnk.jpg) center center / cover no-repeat;
 }
 
 .info {
@@ -216,7 +216,7 @@ footer {
 
 
 #hero {
-    background-image: url(../project-img/hero-image.jpg);
+    background-image: url(https://res.cloudinary.com/adamboley/image/upload/v1676821183/hero-image_h96gsg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     height: 40rem;
