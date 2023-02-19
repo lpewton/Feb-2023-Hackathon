@@ -11,9 +11,9 @@ Run Development server:
 
 - [Scope](#scope)
 - [Background](#background)
+- [Scrum Master](#scrum-master)
 - [Audience](#audience)
     - [User goals](#user-goals)
-    - [Scrum Master](#scrum-master)
 - [Wireframes](#wireframes)
 - [Features](#features)
 - [Development choices](#development-choices)
@@ -22,8 +22,6 @@ Run Development server:
     - [Font](#font)
     - [Images](#images)
 - [Deployment](#deployment)
-    - [Project set-up](#project-set-up)
-    - [Development process](#development-process)
 - [Bugs](#bugs)
 - [Testing](#testing)
 - [Credits](#credits)
@@ -39,6 +37,31 @@ This project is part of the Code Institute February 2023 Hackathon. We researche
 
 **Final website:** [https://feb-2023-hackathon.herokuapp.com/](https://feb-2023-hackathon.herokuapp.com/)
 
+# Scrum Master
+
+As a Scrum Master our team had [Edmir Demaj](https://www.linkedin.com/in/edmir-demaj-42a501196/). As a Scrum Master my duties are:
+- Work on Project idea together with the team.
+- Plan how team members will work on this project.
+- Keep notes for any suggestions, ideas, and changes on the project. 
+- Find out which technologies will be used on this project to involve the whole team.
+- Organise meetings via Slack for the team at suitable times for everyone.
+- Provide a summary after each call on our Slack channel.
+- Create and assign tasks to team members.
+- Check the progress of each one at the end of day.
+- Check the progress of the project to deploy before the deadline.
+- Create a sprint goal for user stories, create To Do tasks and check their progress.
+- Assist in any problems during project development.
+- Make sure the product achieves its final goals.
+
+Since this project is part of Hackathon February 2023 and the time is very limited to have a detailed plan, progress and final report all I could do is to implement all duties mentioned above. Below find the project board built on GitHub and the Sprint Goal made for user stories.
+
+<details><summary>Project board on GitHub</summary>
+<img src="static/project-img/project-board.png">
+</details>
+<details><summary>Sprint Goal</summary>
+<img src="static/project-img/scrum-board.png">
+</details>
+
 # Audience
 
 This project is aimed at anyone who wants to know more about NGOs worldwide. If the user wants to find out more or contribute directly to a specific NGO, they can find the link to take them directly to the NGO website itself.
@@ -53,31 +76,6 @@ This project is aimed at anyone who wants to know more about NGOs worldwide. If 
 - To be able to read an overview of each NGO, e.g., purpose, founder and date it was founded, current director, location, etc.
 - To be able to visit each NGO's website directly (opens in new tab).
 - To find out information about World NGO day and when it is.
-
-## Scrum Master
-
-As a Scrum Master our team had [Edmir Demaj](https://www.linkedin.com/in/edmir-demaj-42a501196/).  As a Scrum Master my duties are:
-- Work on Project idea together with team.
-- Plan how team members will work on this project.
-- Keep notes for any suggestions, ideas, changes on the project. 
-- Find out which technologies will use on this project to involve all team.
-- Organize meetings via Slack for team in a suitable time for all of us.
-- Provide a summary after each call on our Slack channel.
-- Create and assign tasks to team members.
-- Check the progress of each one at the end of day.
-- Check the progress of the project to deploy before the deadline.
-- Create a sprint goal for user stories, create To Do tasks and check thier progress.
-- Assist in any problems during project development.
-- Make sure product achives its final goals.
-
-Since this project is part of Hackathon February 2023 and the time is very limited to have a detailed plan, progress and final report all i could do is to implement all duties mentioned above. Below find project board built on GitHub and the Sprint Goal made for user stories.
-
-<details><summary>Project board on GitHub</summary>
-<img src="static/project-img/project-board.png">
-</details>
-<details><summary>Sprint Goal</summary>
-<img src="static/project-img/scrum-board.png">
-</details>
 
 # Wireframes
 
@@ -107,32 +105,54 @@ Created using [Figma](https://www.figma.com/) (click to expand)
 
 ### Logo
 
-`Add information about logo choice/how it was made`
+- Features an image of the Earth above the site name, 'Friends of Earth'.
+- Uses green colours in-keeping with the site colour scheme and tying to nature and the Earth.
 
 ![Logo](documentation/design/logo.png)
 
 ### Navigation menu
 
-The navigation menu at the top of the page allows for easy site navigation; it is clear to the user how to access different pages or to return to a previous page without relying on browser forward/back buttons.
-
-### Hero image
-
+- At the top of every page allows for easy site navigation.
+-  Makes it clear to the user how they can access different pages or to return to a previous page without relying on browser forward/back buttons.
 
 ### Search bar
 
-The search bar allows users to search for a specific element on the website, e.g., if they are looking for information on a particular NGO.
+- Allows users to search for a specific element on the website, e.g., if they are looking for information on a particular NGO.
 
 ### Homepage
 
+- Displays a slideshow of three random NGOs from the directory, above a button to check out more NGOs which takes the user to the directory page. This is above the fold so it is the first thing a user will see when visiting the site.
+- Slideshow is over a hero image of a landscape, which clearly relates to the site name 'Friends of Earth' and also to environmental NGOs.
+- It also features a short explanation of World NGO Day - when it is and what NGOs are.
 
-### NGOs page
+### Directory (NGOs) page
 
-
-### About page
-
+- Each page features a brief overview of six different NGOs, including:
+    - Name
+    - Logo
+    - Brief description
+    - Internal link to more information on our site
+    - External link to the NGO's site (opens in a new tab so the user can easily navigate back to our site)
+- The user can navigate between the directory pages by using the 'first', 'previous', 'next' and 'last' buttons at the bottom of the screen.
 
 ### Contact page
 
+- Features a short description of reasons a user might want to get in touch with us.
+- Provides various contact details - phone number, email address and Google Maps location, as well as links to social media sites.
+- User can fill out a form with their contact details and message, which will go to our database and allows us to get in touch with them to reply.
+- Contact details and form are over a hero image of the Earth as seen from space, again relating to the site name 'Friends of Earth' but a different take on it, to provide variety and also to focus more on the worldwide/global aspect of the site.
+
+### Random page
+
+- Takes the user to a page with information about a random NGO in our database.
+
+### About us page
+
+- Explains who we are and why our website was created, along with images relating to different types of NGO.
+
+### Footer
+
+- Features Copyright, team name and social media links to feature at the bottom of every page.
 
 ### Favicon
 
@@ -148,19 +168,10 @@ The chosen colour palette is symbolic of the Earth and uses complementing blues,
 ![Colour palette](documentation/design/colour-palette.png)
 
 ## Font
-The chosen font is `Add font here`
+The chosen font is Montserrat.
 The font is white over the darker background of the header and footer, and dark over white and light backgrounds in the main body of each page to make sure it is accessible and can be easily read by users.
 
-## Images
-
-
 # Deployment
-
-
-## Project set-up
-
-
-## Development process
 
 
 # Bugs
