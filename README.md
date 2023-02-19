@@ -13,6 +13,7 @@ Run Development server:
 - [Background](#background)
 - [Audience](#audience)
     - [User goals](#user-goals)
+    - [Scrum Master](#scrum-master)
 - [Wireframes](#wireframes)
 - [Features](#features)
 - [Development choices](#development-choices)
@@ -52,6 +53,31 @@ This project is aimed at anyone who wants to know more about NGOs worldwide. If 
 - To be able to read an overview of each NGO, e.g., purpose, founder and date it was founded, current director, location, etc.
 - To be able to visit each NGO's website directly (opens in new tab).
 - To find out information about World NGO day and when it is.
+
+## Scrum Master
+
+As a Scrum Master our team had [Edmir Demaj](https://www.linkedin.com/in/edmir-demaj-42a501196/).  As a Scrum Master my duties are:
+- Work on Project idea together with team.
+- Plan how team members will work on this project.
+- Keep notes for any suggestions, ideas, changes on the project. 
+- Find out which technologies will use on this project to involve all team.
+- Organize meetings via Slack for team in a suitable time for all of us.
+- Provide a summary after each call on our Slack channel.
+- Create and assign tasks to team members.
+- Check the progress of each one at the end of day.
+- Check the progress of the project to deploy before the deadline.
+- Create a sprint goal for user stories, create To Do tasks and check thier progress.
+- Assist in any problems during project development.
+- Make sure product achives its final goals.
+
+Since this project is part of Hackathon February 2023 and the time is very limited to have a detailed plan, progress and final report all i could do is to implement all duties mentioned above. Below find project board built on GitHub and the Sprint Goal made for user stories.
+
+<details><summary>Project board on GitHub</summary>
+<img src="static/project-img/project-board.png">
+</details>
+<details><summary>Sprint Goal</summary>
+<img src="static/project-img/scrum-board.png">
+</details>
 
 # Wireframes
 
