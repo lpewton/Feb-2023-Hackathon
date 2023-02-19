@@ -4,7 +4,8 @@ from django.views.generic.base import TemplateView
 from django.http import HttpResponseRedirect
 from django.urls import reverse, reverse_lazy
 from django.db.models import Q
-from .models import NGO
+from .models import NGO, Message
+from .forms import MessageForm
 
 
 class LandingPage(generic.ListView):
@@ -97,16 +98,44 @@ class SearchResults(generic.ListView):
         return object_list
 
 
-class Contact(TemplateView):
+class Contact(generic.CreateView):
     """
     View for contact page
-    Could construct a queryset for users?
+    CreateView is used to handle the message form submission
     """
+    model = Message
+    form_class = MessageForm
     template_name = 'contact.html'
 
-    def get_context_data(self, *args, **kwargs):
-        context = super().get_context_data(**kwargs)
-        return context
+    def post(self, request, *args, **kwargs):
+        """
+        Post method to handle form submission
+        """
+        template_name = 'contact.html'
+
+        message_form = MessageForm(request.POST)
+
+        if message_form.is_valid():
+            message = message_form.save(commit=False)
+            message.save()
+
+            context = {
+                "message_form": MessageForm(),
+                "submitted": True
+            }
+
+            return render(request, Contact.template_name, context)
+
+        else:
+            message_form = MessageForm()
+
+            context = {
+                "message_form": MessageForm(),
+                "submitted": False,
+                "failure": True
+            }
+
+            return render(request, Contact.template_name, context)
 
 
 def http_404(request, exception):

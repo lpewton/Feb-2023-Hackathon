@@ -122,7 +122,7 @@ footer {
     background-color: #ffffffc4;
     color: black;
     border-radius: 10px;
-    height: 260px;
+    /* height: 260px; */
 }
 
 .wrap-info {

@@ -109,3 +109,19 @@ class NGO(models.Model):
 
     def year(self):
         return self.founded.year
+
+
+class Message(models.Model):
+    """
+    Model for Contact view, used to generate a form to capture a user's message
+    """
+    first_name = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=50)
+    email_address = models.EmailField()
+    message = models.TextField()
+
+    def __str__(self):
+        """
+        magic string method
+        """
+        return f"Message from {self.first_name} {self.last_name}"
