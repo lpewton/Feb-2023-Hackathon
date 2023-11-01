@@ -170,14 +170,3 @@ The chosen colour palette is symbolic of the Earth and uses complementing blues,
 ## Font
 The chosen font is Montserrat.
 The font is white over the darker background of the header and footer, and dark over white and light backgrounds in the main body of each page to make sure it is accessible and can be easily read by users.
-
-# Deployment
-
-
-# Bugs
-
-
-# Testing
-
-
-# Credits
